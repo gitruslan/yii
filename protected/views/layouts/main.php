@@ -1,59 +1,97 @@
-<?php /* @var $this Controller */ ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="en" />
-
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
-	<![endif]-->
-
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" type="text/css" media="all">
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.4.2.min.js" ></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/cufon-yui.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/cufon-replace.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/Myriad_Pro_300.font.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/Myriad_Pro_400.font.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/script.js"></script>
+    <!--[if lt IE 7]>
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie6.css" type="text/css" media="screen">
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/ie_png.js"></script>
+    <script type="text/javascript">ie_png.fix('.png, footer, header nav ul li a, .nav-bg, .list li img');</script>
+    <![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/html5.js"></script><![endif]-->
 </head>
+<body id="page1">
+<!-- START PAGE SOURCE -->
+<div class="wrap">
+    <header>
+        <div class="container">
+            <h1><a href="#"></a></h1>
+            <nav>
+                <ul>
+                    <li class="current"><a href="/" class="m1">Home Page</a></li>
+                    <li><a href="#" class="m2">About Us</a></li>
+                    <li><a href="#" class="m3">Our Articles</a></li>
+                    <li><a href="#" class="m4">Contact Us</a></li>
+                    <li class="last"><a href="#" class="m5">Sitemap</a></li>
+                </ul>
+            </nav>
+            <form action="#" id="search-form">
+                <fieldset>
+                    <div class="rowElem">
+                        <input type="text">
+                        <a href="#">Search</a></div>
+                </fieldset>
+            </form>
+        </div>
+    </header>
+    <div class="container">
+        <aside>
+            <h3>Categories</h3>
+            <ul class="categories">
+                <li><span><a href="#">Programs</a></span></li>
+                <li><span><a href="#">Student Info</a></span></li>
+                <li><span><a href="#">Teachers</a></span></li>
+                <li><span><a href="#">Descriptions</a></span></li>
+                <li><span><a href="#">Administrators</a></span></li>
+                <li><span><a href="#">Basic Information</a></span></li>
+                <li><span><a href="#">Vacancies</a></span></li>
+                <li class="last"><span><a href="#">Calendar</a></span></li>
+            </ul>
+            <form action="#" id="newsletter-form">
+                <fieldset>
+                    <div class="rowElem">
+                        <h2>Newsletter</h2>
+                        <input type="email" value="Enter Your Email Here" onFocus="if(this.value=='Enter Your Email Here'){this.value=''}" onBlur="if(this.value==''){this.value='Enter Your Email Here'}" >
+                        <div class="clear"><a href="#" class="fleft">Unsubscribe</a><a href="#" class="fright">Submit</a></div>
+                    </div>
+                </fieldset>
+            </form>
+            <h2>Fresh <span>News</span></h2>
+            <ul class="news">
+                <li><strong>June 30, 2014</strong>
+                    <h4><a href="#">Sed ut perspiciatis unde</a></h4>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque. </li>
+                <li><strong>June 14, 2014</strong>
+                    <h4><a href="#">Neque porro quisquam est</a></h4>
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit consequuntur magni. </li>
+                <li><strong>May 29, 2014</strong>
+                    <h4><a href="#">Minima veniam, quis nostrum</a></h4>
+                    Uis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae. </li>
+            </ul>
+        </aside>
+        <section id="content">
 
-<body>
+            <?php echo $content; ?>
 
-<div class="container" id="page">
-
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
-
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
-
-	<?php echo $content; ?>
-
-	<div class="clear"></div>
-
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
-
-</div><!-- page -->
-
+            <div class="clear"></div>
+        </section>
+    </div>
+</div>
+<footer>
+    <div class="footerlink">
+        <p class="lf">Copyright &copy; 2014 <a href="#"><?php echo CHtml::encode(Yii::app()->name); ?></a> - All Rights Reserved</p>
+        <div style="clear:both;"></div>
+    </div>
+</footer>
+<script type="text/javascript"> Cufon.now(); </script>
+<!-- END PAGE SOURCE -->
 </body>
 </html>
