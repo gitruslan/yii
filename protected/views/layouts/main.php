@@ -27,10 +27,10 @@
             <nav>
                 <ul>
                     <li class="current"><a href="/" class="m1">Home Page</a></li>
-                    <li><a href="#" class="m2">About Us</a></li>
-                    <li><a href="#" class="m3">Our Articles</a></li>
-                    <li><a href="#" class="m4">Contact Us</a></li>
-                    <li class="last"><a href="#" class="m5">Sitemap</a></li>
+                    <li><a href="/about_us" class="m2">About Us</a></li>
+                    <li><a href="/articles" class="m3">Our Articles</a></li>
+                    <li><a href="/contact_us" class="m4">Contact Us</a></li>
+                    <li class="last"><a href="/sitemap" class="m5">Sitemap</a></li>
                 </ul>
             </nav>
             <form action="#" id="search-form">
@@ -78,10 +78,15 @@
             </ul>
         </aside>
         <section id="content">
+            <div id="banner">
+                <h2>Professional <span>Online Education <span>Since 1992</span></span></h2>
+            </div>
+            <div class="inside">
 
-            <?php echo $content; ?>
+                <?php echo $content; ?>
 
-            <div class="clear"></div>
+                <div class="clear"></div>
+            </div>
         </section>
     </div>
 </div>

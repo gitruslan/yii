@@ -36,6 +36,15 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+        'urlManager'=>array(
+            'urlFormat'=>'path',
+            'rules'=>array(
+                'contact_us'=>'site/contact',
+                'about_us'=>'site/about',
+                'articles'=>'site/articles',
+                'sitemap'=>'site/sitemap',
+            ),
+        ),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(

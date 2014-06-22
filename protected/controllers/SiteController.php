@@ -72,7 +72,28 @@ class SiteController extends Controller
 		$this->render('contact',array('model'=>$model));
 	}
 
-	/**
+    /**
+     * Display articles page
+     */
+    public function actionArticles(){
+        $this->render("articles");
+    }
+    /**
+     * Display about us page
+     */
+    public function actionAbout(){
+        $this->render("about");
+    }
+    /**
+     * Display articles page
+     */
+    public function actionSitemap(){
+        $this->render("sitemap");
+    }
+
+
+
+    /**
 	 * Displays the login page
 	 */
 	public function actionLogin()
