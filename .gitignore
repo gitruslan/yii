@@ -1,4 +1,9 @@
-.idea
+# phpstorm project files
+.idea/
+
+# netbeans project files
+nbproject
+
 protected/runtime/
 ._*
 .~lock.*
@@ -9,6 +14,4 @@ protected/runtime/
 .settings
 composer.lock
 composer.json
-composer.phar
-
-
+assets/

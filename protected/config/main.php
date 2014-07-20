@@ -38,11 +38,13 @@ return array(
 		),
         'urlManager'=>array(
             'urlFormat'=>'path',
+            'showScriptName'=>false,
             'rules'=>array(
+                '/'=>'site/index',
                 'contact_us'=>'site/contact',
                 'about_us'=>'site/about',
                 'articles'=>'site/articles',
-                'sitemap'=>'site/sitemap',
+                'p-cabinet'=>'site/personalCabinet',
             ),
         ),
 		// uncomment the following to enable URLs in path-format

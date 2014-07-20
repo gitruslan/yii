@@ -91,6 +91,29 @@ class SiteController extends Controller
         $this->render("sitemap");
     }
 
+    public function actionPersonalCabinet(){
+//        $model = new LoginForm();
+//
+//        if($this->_request->isPost){
+//            if ($model->load($this->_request->post()) && $model->login()) {
+//                return $this->render("p_cabinet",['identy'=>$this->_user->identity,
+//                    'cabinet'=>Cabinet::getUserCabinet($this->_user->identity->id)
+//                ]);
+//            }
+//        }elseif(!$this->_user->isGuest){
+//            return $this->render("p_cabinet",['identy'=>$this->_user->identity,
+//                'cabinet'=>Cabinet::getUserCabinet($this->_user->identity->id)
+//            ]);
+//        }
+//        return $this->render("p_cabinet_login",['model'=>$model]);
+        $this->render('p_cabinet_login');
+    }
+    public function actionLogout(){
+        if(!$this->_user->isGuest)
+            $this->_user->logout();
+        $this->redirect("/");
+    }
+
 
 
     /**
@@ -119,12 +142,4 @@ class SiteController extends Controller
 		$this->render('login',array('model'=>$model));
 	}
 
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
-	public function actionLogout()
-	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
-	}
 }

@@ -25,13 +25,15 @@
         <div class="container">
             <h1><a href="#"></a></h1>
             <nav>
-                <ul>
-                    <li class="current"><a href="/" class="m1">Home Page</a></li>
-                    <li><a href="/about_us" class="m2">About Us</a></li>
-                    <li><a href="/articles" class="m3">Our Articles</a></li>
-                    <li><a href="/contact_us" class="m4">Contact Us</a></li>
-                    <li class="last"><a href="/sitemap" class="m5">Sitemap</a></li>
-                </ul>
+                <?php $this->widget('CSimpleMenu',[
+                    'item'=>[
+                        ['name'=>'Home Page','url'=>'site/index','class'=>'m1'],
+                        ['name'=>'About Us','url'=>'site/about','class'=>'m1'],
+                        ['name'=>'Our Articles','url'=>'site/articles','class'=>'m1'],
+                        ['name'=>'Contact Us','url'=>'site/contact','class'=>'m1'],
+                        ['name'=>'Personal Cabinet','url'=>'site/personalCabinet','class'=>'m1'],
+                    ]
+                ])?>
             </nav>
             <form action="#" id="search-form">
                 <fieldset>
