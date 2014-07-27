@@ -6,7 +6,6 @@
         <div> Remember Me<input type="checkbox" name="rememberme">
             <input type="submit" class="submit-button" value="submit">
         </div>
-        <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>">
     </form>
 </div>
 

@@ -80,9 +80,12 @@
             </ul>
         </aside>
         <section id="content">
+            <?php
+                if(!array_key_exists(Yii::app()->request->pathinfo,Yii::app()->params['hideBlock'])):?>
             <div id="banner">
                 <h2>Professional <span>Online Education <span>Since 1992</span></span></h2>
             </div>
+            <?php endif;?>
             <div class="inside">
 
                 <?php echo $content; ?>

@@ -106,7 +106,12 @@ class SiteController extends Controller
 //            ]);
 //        }
 //        return $this->render("p_cabinet_login",['model'=>$model]);
-        $this->render('p_cabinet_login');
+        if(Yii::app()->request->getIsPostRequest()){
+            $this->render('p_cabinet');
+        }else{
+            $this->render('p_cabinet_login');
+        }
+
     }
     public function actionLogout(){
         if(!$this->_user->isGuest)

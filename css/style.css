@@ -527,3 +527,78 @@ footer .footerlink {
 a {
 	outline:none;
 }
+.user-cabinet-table{
+    width:50%;
+    margin-top:20px;
+
+}
+.user-cabinet-table thead {
+    border-radius: 10px;
+    border:1px solid black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color:#008cc4;
+    padding-top:10px;
+}
+.user-cabinet-table tbody tr td{
+    border:1px solid #008cc4;
+    border-radius: 5px;
+}
+/*Tabs menu*/
+#tab2, #tab3,#tab4 {position: fixed; }
+
+.tab-menu > a,
+.tab-menu #tab2:target ~ a:nth-of-type(1),
+.tab-menu #tab3:target ~ a:nth-of-type(1),
+.tab-menu #tab4:target ~ a:nth-of-type(1),
+.tab-menu > div { padding: 5px; border: 1px solid #aaa;}
+
+.tab-menu > a { line-height: 28px; background: #fff; text-decoration: none; border-radius: 5px 5px 0 0;  }
+
+.tab-menu div{
+    margin-top: -1px;
+    background: #fff;
+    min-height: 200px;
+}
+
+
+#tab2,
+#tab3,
+#tab4,
+.tab-menu > div,
+.tab-menu #tab2:target ~ div:nth-of-type(1),
+.tab-menu #tab3:target ~ div:nth-of-type(1),
+.tab-menu #tab4:target ~ div:nth-of-type(1) {display: none; }
+
+.tab-menu > div:nth-of-type(1),
+.tab-menu #tab2:target ~ div:nth-of-type(2),
+.tab-menu #tab3:target ~ div:nth-of-type(3),
+.tab-menu #tab4:target ~ div:nth-of-type(4) { display: block; }
+
+.tab-menu > a:nth-of-type(1),
+.tab-menu #tab2:target ~ a:nth-of-type(2),
+.tab-menu #tab3:target ~ a:nth-of-type(3),
+.tab-menu #tab4:target ~ a:nth-of-type(4) { border-bottom: 2px solid #fff; }
+
+/*end tabs menu*/
+/*form login*/
+.form-login{
+    width:70%;
+    border:1px solid grey;
+    border-radius: 5px;
+}
+.form-login div{
+    margin: 20px 5px;
+}
+.form-login input[name=login],.form-login input[name=pass]{
+    width:180px;
+    height:24px;
+    float:right;
+    border:1px solid grey;
+    border-radius: 5px;
+    clear: both;
+    padding-left:5px;
+    margin: -5px 50px 0 0;
+}
+

@@ -26,6 +26,7 @@ class CSimpleMenu extends CWidget{
     }
 
     protected function reInitItems(){
+        if(!is_array($this->item)) return false;
         foreach($this->item as $it){
             $temp_t = $this->linkTemplate;
             if($this->route == $it['url']){
