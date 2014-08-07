@@ -45,6 +45,7 @@ return array(
                 'about_us'=>'site/about',
                 'articles'=>'site/articles',
                 'p-cabinet'=>'site/personalCabinet',
+                'logout'=>'site/logout'
             ),
         ),
 		// uncomment the following to enable URLs in path-format
@@ -60,10 +61,10 @@ return array(
 		*/
 
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
+			'connectionString' => 'mysql:host=localhost;dbname=en_school',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'root',
 			'charset' => 'utf8',
 		),
 

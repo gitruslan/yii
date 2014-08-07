@@ -2,6 +2,7 @@
 
 class SiteController extends Controller
 {
+    public $errorMessage;
 	/**
 	 * Declares class-based actions.
 	 */
@@ -92,30 +93,25 @@ class SiteController extends Controller
     }
 
     public function actionPersonalCabinet(){
-//        $model = new LoginForm();
-//
-//        if($this->_request->isPost){
-//            if ($model->load($this->_request->post()) && $model->login()) {
-//                return $this->render("p_cabinet",['identy'=>$this->_user->identity,
-//                    'cabinet'=>Cabinet::getUserCabinet($this->_user->identity->id)
-//                ]);
-//            }
-//        }elseif(!$this->_user->isGuest){
-//            return $this->render("p_cabinet",['identy'=>$this->_user->identity,
-//                'cabinet'=>Cabinet::getUserCabinet($this->_user->identity->id)
-//            ]);
-//        }
-//        return $this->render("p_cabinet_login",['model'=>$model]);
-        if(Yii::app()->request->getIsPostRequest()){
-            $this->render('p_cabinet');
-        }else{
-            $this->render('p_cabinet_login');
+        if(!Yii::app()->user->getIsGuest())
+            $this->render("p_cabinet");
+        if( Yii::app()->request->getPost('login',false) &&
+            Yii::app()->request->getPost('password',false)){
+           $identy = new UserIdentity(Yii::app()->request->getPost('login',false),Yii::app()->request->getPost('password',false));
+           if($identy->authenticate()){
+               Yii::app()->user->login($identy);
+               $this->render("p_cabinet");
+           }else{
+               $this->errorMessage = $identy->errorMessage;
+           }
         }
+        $this->render("p_cabinet_login",array('errorMessage',$this->errorMessage));
+
 
     }
     public function actionLogout(){
-        if(!$this->_user->isGuest)
-            $this->_user->logout();
+        if(!Yii::app()->user->getIsGuest())
+            Yii::app()->user->logout();
         $this->redirect("/");
     }
 

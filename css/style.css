@@ -591,7 +591,7 @@ a {
 .form-login div{
     margin: 20px 5px;
 }
-.form-login input[name=login],.form-login input[name=pass]{
+.form-login input[name=login],.form-login input[name=password]{
     width:180px;
     height:24px;
     float:right;
