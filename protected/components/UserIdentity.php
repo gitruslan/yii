@@ -13,6 +13,11 @@ class UserIdentity extends CUserIdentity
 
     private $_user;
     private $_id;
+    /**
+     * @var string
+     */
+    public $errorMessage = "Invalid username or password";
+
 
 	public function authenticate()
 	{
@@ -25,6 +30,7 @@ class UserIdentity extends CUserIdentity
            $this->_id = $this->_user->id;
            $this->setState('username', $this->_user->username);
            $this->errorCode = self::ERROR_NONE;
+           $this->errorMessage = '';
        }
        return !$this->errorCode;
 	}

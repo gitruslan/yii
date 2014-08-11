@@ -1,5 +1,5 @@
 <?php
-  if(isset($errorMessage)){
+  if(isset($this->errorMessage)){
      echo "<div style='color:red'>".$this->errorMessage."</div>";
   }
 ?>
